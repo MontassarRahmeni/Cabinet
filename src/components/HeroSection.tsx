@@ -13,34 +13,25 @@ const HeroSection = () => (
     <div className="relative container mx-auto px-4 py-24 md:py-32">
       <div className="max-w-2xl space-y-6">
         <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium backdrop-blur-sm">
-          🦷 Cabinet Dentaire Dr Marwa Ben Dhia Boumaiza
+          🦷 Cabinet Dentaire Moderne
         </span>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight">
-          Cabinet Dentaire Dr Marwa Ben Dhia Boumaiza<br />
-          <span className="text-3xl md:text-4xl lg:text-5xl">Votre sourire, notre priorité</span>
+          Votre sourire,<br />notre expertise
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/80 max-w-lg">
-          Spécialiste en implantologie et esthétique dentaire. Un cabinet moderne équipé des dernières technologies pour des soins dentaires en toute confiance et sérénité.
+          Un cabinet dentaire moderne équipé des dernières technologies pour des soins de qualité dans un cadre professionnel et rassurant.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-elevated" asChild>
-            <a href="https://wa.me/21655799655" target="_blank" rel="noopener noreferrer">
+            <a href="#contact">
               <MessageCircle className="mr-2 h-5 w-5" />
               Prendre rendez-vous
             </a>
           </Button>
           <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-            <a href="tel:+21655799655">
+            <a href="tel:+216 123456789">
               <Phone className="mr-2 h-5 w-5" />
               Appeler maintenant
-            </a>
-          </Button>
-        </div>
-        <div className="mt-4">
-          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white shadow-elevated" asChild>
-            <a href="https://wa.me/21655799655?text=Urgence%20dentaire%20-%20Besoin%20d'un%20rendez-vous%20en%20urgence" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Urgence dentaire – WhatsApp maintenant
             </a>
           </Button>
         </div>

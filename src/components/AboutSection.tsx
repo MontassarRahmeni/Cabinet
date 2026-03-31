@@ -1,11 +1,11 @@
 import { ShieldCheck, Award, HeartPulse, Sparkles } from "lucide-react";
-import drMarwaPhoto from "@/assets/dr-marwa-photo.jpg";
+import heroImg from "@/assets/dentist-portrait.jpg";
 
 const features = [
-  { icon: Award, title: "Spécialiste en implantologie", desc: "Expertise reconnue en pose d'implants dentaires pour restaurer votre sourire." },
-  { icon: Sparkles, title: "Esthétique dentaire", desc: "Techniques avancées de blanchiment et de cosmétique dentaire." },
-  { icon: ShieldCheck, title: "Cabinet moderne et hygiénique", desc: "Équipements de dernière génération et protocoles d'hygiène stricts." },
-  { icon: HeartPulse, title: "Relation de confiance", desc: "Approche douce et professionnelle pour un accompagnement personnalisé." },
+  { icon: Award, title: "Plus de 15 ans d'expérience", desc: "Un savoir-faire reconnu dans les soins dentaires pour garantir des résultats exceptionnels." },
+  { icon: Sparkles, title: "Équipements modernes", desc: "Technologies de pointe et matériel de dernière génération pour des soins précis et confortables." },
+  { icon: ShieldCheck, title: "Hygiène irréprochable", desc: "Protocoles stricts de stérilisation et de sécurité pour votre protection absolue." },
+  { icon: HeartPulse, title: "Écoute & confiance", desc: "Un accompagnement personnalisé et une approche bienveillante pour chaque patient." },
 ];
 
 const AboutSection = () => (
@@ -15,10 +15,10 @@ const AboutSection = () => (
         {/* Image */}
         <div className="relative">
           <div className="rounded-2xl overflow-hidden shadow-elevated">
-            <img src={drMarwaPhoto} alt="Dr Marwa Ben Dhia Boumaiza - Chirurgien-dentiste" loading="lazy" width={800} height={800} className="w-full h-auto object-cover" />
+            <img src={heroImg} alt="Dr. [Nom] - Chirurgien-dentiste" loading="lazy" width={800} height={800} className="w-full h-auto object-cover" />
           </div>
           <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-xl px-6 py-3 shadow-soft font-heading text-lg font-semibold">
-            Dr Marwa Ben Dhia Boumaiza
+            Dr. [Nom]
           </div>
         </div>
 
@@ -26,12 +26,12 @@ const AboutSection = () => (
         <div className="space-y-8">
           <div>
             <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">À propos</p>
-            <h2 className="section-title">Une expertise au service de votre sourire</h2>
+            <h2 className="section-title">Un dentiste à votre écoute</h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Le Dr Marwa Ben Dhia Boumaiza, chirurgien-dentiste spécialisée en implantologie et esthétique dentaire, vous accueille dans un cabinet moderne et équipé des dernières technologies. Avec une approche douce et professionnelle, elle met tout en œuvre pour offrir des soins dentaires de qualité supérieure.
+              Le Dr. [Nom], chirurgien-dentiste diplômé et expérimenté, vous accueille dans un cabinet moderne et équipé des dernières technologies. Passionné par son métier, il met tout en œuvre pour offrir des soins dentaires de qualité supérieure, adaptés aux besoins spécifiques de chaque patient.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mt-4">
-              Forte d'une expérience significative en soins dentaires, détartrage, blanchiment et implantologie, le Dr Ben Dhia Boumaiza établit une relation de confiance avec chaque patient. Son objectif : des résultats naturels et durables dans un cadre sécurisant et confortable.
+              Fort d'une expérience significative dans tous les domaines de la dentisterie moderne, le Dr. [Nom] établit une relation de confiance basée sur l'écoute, la transparence et l'excellence. Son objectif : préserver votre santé bucco-dentaire tout en vous garantissant confort et sérénité lors de chaque visite.
             </p>
           </div>
 

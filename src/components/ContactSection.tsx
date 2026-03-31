@@ -23,39 +23,30 @@ const ContactSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Contact</p>
-          <h2 className="section-title">Prenez rendez-vous avec le Dr Marwa</h2>
-          <p className="section-subtitle">Une question ? Besoin d'un rendez-vous ? Contactez-nous par téléphone, WhatsApp ou via le formulaire ci-dessous.</p>
+          <h2 className="section-title">Contactez-nous</h2>
+          <p className="section-subtitle">Une question ? N'hésitez pas à nous contacter par téléphone, WhatsApp ou via le formulaire ci-dessous.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* CTA buttons */}
           <div className="space-y-6 flex flex-col justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full justify-center shadow-elevated" asChild>
-              <a href="https://wa.me/21655799655" target="_blank" rel="noopener noreferrer">
+              <a href="#contact">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Écrire sur WhatsApp
               </a>
             </Button>
             <Button size="lg" variant="outline" className="w-full justify-center" asChild>
-              <a href="tel:+21655799655">
+              <a href="tel:+21612345678">
                 <Phone className="mr-2 h-5 w-5" />
-                Appeler : 55 799 655
+                Appeler : +216 1 23 45 67 89
               </a>
             </Button>
             <div className="bg-card rounded-2xl p-6 shadow-card">
               <p className="text-foreground font-semibold mb-1">Horaires d'ouverture</p>
-              <p className="text-muted-foreground text-sm">Lun-Sam : 08h30 - 18h00</p>
-              <p className="text-muted-foreground text-sm mt-2">Urgences dentaires disponibles 24/7. Contactez-nous par WhatsApp en cas d'urgence.</p>
-            </div>
-            <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
-              <p className="text-blue-700 font-semibold mb-2">🚨 Urgence dentaire ?</p>
-              <p className="text-blue-600 text-sm mb-3">Douleur intense, dent cassée, ou autre urgence ?</p>
-              <Button size="sm" className="bg-blue-500 hover:bg-blue-600 text-white w-full" asChild>
-                <a href="https://wa.me/21655799655?text=Urgence%20dentaire%20-%20Besoin%20d'un%20rendez-vous%20en%20urgence" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  WhatsApp d'urgence
-                </a>
-              </Button>
+              <p className="text-muted-foreground text-sm">Lun-Ven : 08h - 18h</p>
+              <p className="text-muted-foreground text-sm">Sam : 09h - 13h</p>
+              <p className="text-muted-foreground text-sm">Dim : Fermé</p>
             </div>
           </div>
 
@@ -77,14 +68,13 @@ const ContactSection = () => {
             />
             <Input
               type="tel"
-              placeholder="Votre téléphone *"
+              placeholder="Votre téléphone"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               maxLength={20}
-              required
             />
             <Textarea
-              placeholder="Décrivez votre besoin ou le soin souhaité *"
+              placeholder="Votre message *"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               maxLength={1000}

@@ -1,12 +1,12 @@
-import { Stethoscope, Sparkles, Sun, Wrench, Siren, Heart } from "lucide-react";
+import { Stethoscope, Sparkles, Sun, Wrench, AlignVerticalSpaceAround, Siren } from "lucide-react";
 
 const services = [
-  { icon: Stethoscope, title: "Soins dentaires", desc: "Traitement des caries, dévitalisations et restaurations pour une santé bucco-dentaire optimale." },
-  { icon: Sparkles, title: "Détartrage", desc: "Nettoyage professionnel pour éliminer le tartre et prévenir les maladies parodontales." },
+  { icon: Stethoscope, title: "Soins dentaires", desc: "Traitement complet des caries, dévitalisations et restaurations pour une santé bucco-dentaire optimale." },
+  { icon: Sparkles, title: "Détartrage professionnel", desc: "Nettoyage en profondeur pour éliminer le tartre et prévenir les maladies parodontales." },
   { icon: Sun, title: "Blanchiment dentaire", desc: "Techniques avancées pour un sourire éclatant et naturel en toute sécurité." },
   { icon: Wrench, title: "Implants dentaires", desc: "Remplacement durable des dents manquantes grâce aux implants de dernière génération." },
-  { icon: Heart, title: "Esthétique dentaire", desc: "Facettes, couronnes et bridges pour un sourire harmonieux et esthétique." },
-  { icon: Siren, title: "Urgence dentaire", desc: "Prise en charge rapide des douleurs, traumatismes et urgences dentaires 24/7." },
+  { icon: AlignVerticalSpaceAround, title: "Orthodontie", desc: "Solutions modernes pour aligner vos dents et obtenir un sourire harmonieux." },
+  { icon: Siren, title: "Urgences dentaires", desc: "Prise en charge rapide des douleurs, traumatismes et urgences dentaires 24/7." },
 ];
 
 const ServicesSection = () => (
@@ -14,8 +14,8 @@ const ServicesSection = () => (
     <div className="container mx-auto">
       <div className="text-center mb-16">
         <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Nos services</p>
-        <h2 className="section-title">Des soins dentaires de qualité supérieure</h2>
-        <p className="section-subtitle">Le Dr Marwa Ben Dhia Boumaiza vous propose une gamme complète de soins dentaires spécialisés.</p>
+        <h2 className="section-title">Des soins dentaires complets</h2>
+        <p className="section-subtitle">Nous proposons une gamme complète de soins dentaires pour répondre à tous vos besoins.</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

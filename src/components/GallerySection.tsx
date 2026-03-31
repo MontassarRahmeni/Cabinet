@@ -3,7 +3,7 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 
 const images = [
-  { src: gallery1, alt: "Fauteuil dentaire moderne du cabinet", label: "Salle de soins" },
+  { src: gallery1, alt: "Salle de soins moderne avec fauteuil dentaire", label: "Salle de soins" },
   { src: gallery2, alt: "Équipements dentaires de dernière génération", label: "Technologie avancée" },
   { src: gallery3, alt: "Salle d'attente moderne et accueillante", label: "Espace accueil" },
 ];
@@ -13,7 +13,7 @@ const GallerySection = () => (
     <div className="container mx-auto">
       <div className="text-center mb-16">
         <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Galerie</p>
-        <h2 className="section-title">Notre cabinet dentaire moderne</h2>
+        <h2 className="section-title">Découvrez notre cabinet moderne</h2>
         <p className="section-subtitle">Un environnement propre, moderne et équipé des dernières technologies pour vos soins dentaires.</p>
       </div>
 

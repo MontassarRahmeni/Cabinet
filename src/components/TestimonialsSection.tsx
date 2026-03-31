@@ -1,78 +1,42 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, User } from "lucide-react";
 
 const testimonials = [
-  {
-    name: "Sarra T.",
-    text: "Le blanchiment dentaire chez le Dr Marwa a dépassé mes attentes ! Résultat naturel et éclatant. Elle explique parfaitement chaque étape.",
-    rating: 5,
-  },
-  {
-    name: "Karim B.",
-    text: "Excellent détartrage ! Le Dr Marwa est très douce et professionnelle. Le cabinet est impeccable et moderne. Je me suis senti en confiance.",
-    rating: 5,
-  },
-  {
-    name: "Leila M.",
-    text: "Dr Marwa est vraiment à l'écoute et très professionnelle. Elle prend le temps d'expliquer les soins et les résultats sont naturels. Je recommande !",
-    rating: 5,
-  },
-  {
-    name: "Youssef K.",
-    text: "Implant dentaire réussi parfaitement ! Le suivi est impeccable et le Dr Marwa est une véritable professionnelle. Cabinet très propre.",
-    rating: 5,
-  },
-  {
-    name: "Amine H.",
-    text: "Très bonne expérience chez Dr Marwa. Cabinet moderne, accueil professionnel et soins sans douleur. Je recommande vivement.",
-    rating: 5,
-  },
+  { name: "Sophie L.", text: "Un cabinet exceptionnel ! Le dentiste est très professionnel et à l'écoute. Le détartrage a été rapide et indolore. Je recommande vivement.", rating: 5 },
+  { name: "Thomas M.", text: "Excellent blanchiment dentaire ! Résultat naturel et éclatant. Le cabinet est très moderne et propre. Je suis très satisfait du service.", rating: 5 },
+  { name: "Marie D.", text: "J'avais très peur du dentiste, mais l'équipe m'a mise en confiance. Les soins sont de qualité et le suivi est impeccable.", rating: 5 },
+  { name: "Ahmed K.", text: "Service professionnel et attentionné. Le dentiste prend le temps d'expliquer les traitements et les résultats sont parfaits.", rating: 5 },
 ];
 
-const TestimonialsSection = () => {
-  return (
-    <section id="avis" className="section-padding bg-dental-warm overflow-hidden">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
-            Témoignages
-          </p>
-          <h2 className="section-title">4.9/5 étoiles • 58 avis Google</h2>
-          <p className="section-subtitle">
-            Découvrez ce que nos patients disent du Dr Marwa Ben Dhia Boumaiza
-          </p>
-        </div>
-
-        <div className="overflow-hidden relative">
-          <div className="flex gap-6 animate-scroll">
-            {[...testimonials, ...testimonials].map((t, index) => (
-              <div
-                key={index}
-                className="min-w-[300px] bg-card rounded-2xl p-6 shadow-card hover:shadow-elevated transition-shadow"
-              >
-                <Quote className="h-8 w-8 text-primary/20 mb-3" />
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  "{t.text}"
-                </p>
-
-                <div className="flex gap-0.5 mb-2">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-primary text-primary"
-                    />
-                  ))}
-                </div>
-
-                <p className="font-semibold text-foreground text-sm">
-                  {t.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+const TestimonialsSection = () => (
+  <section id="avis" className="section-padding bg-dental-warm overflow-hidden">
+    <div className="container mx-auto">
+      <div className="text-center mb-16">
+        <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Témoignages</p>
+        <h2 className="section-title">Ce que disent nos patients</h2>
+        <p className="section-subtitle">La satisfaction de nos patients est notre plus grande récompense.</p>
       </div>
-    </section>
-  );
-};
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {testimonials.map((t) => (
+          <div key={t.name} className="bg-card rounded-2xl p-6 shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 animate-slide-in">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+                <User className="h-5 w-5 text-primary" />
+              </div>
+              <Quote className="h-6 w-6 text-primary/20" />
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{t.text}"</p>
+            <div className="flex gap-0.5 mb-2">
+              {Array.from({ length: t.rating }).map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+              ))}
+            </div>
+            <p className="font-semibold text-foreground text-sm">{t.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default TestimonialsSection;
